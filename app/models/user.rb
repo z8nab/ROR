@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	# has_secure_password
-	def self.authenticate(login, pass)
-    		find(:first, :conditions=>["login = ? AND password = ?", login, pass])
+	def self.authenticate(pass)
+    		find(:first, :conditions=>["password = ?",pass])
     	end
 end
